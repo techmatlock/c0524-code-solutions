@@ -50,7 +50,11 @@ The type of undefined is undefined, while null is an object. undefined typically
 
 - Why is it a good habit to include "labels" when you log values to the browser console?
 
+So that you can see the expected output based on the label.
+
 - Give five examples of JavaScript primitives.
+
+string, number, boolean, null, and undefined.
 
 ## Notes
 
