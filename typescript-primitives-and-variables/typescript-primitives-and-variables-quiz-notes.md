@@ -42,6 +42,8 @@ The assignment operator assigns the value on its right to the variable on its le
 
 - How do you update the value of a variable?
 
+By using the assignment operator and creating a new value on the right to the variable on its left.
+
 - What is the difference between `null` and `undefined`?
 
 The type of undefined is undefined, while null is an object. undefined typically indicates that a variable has not been initialized, while null is used to intentionally denote the absence of any value.
