@@ -14,7 +14,7 @@ Joins two or more string values.
 
 - What purpose(s) does the `+` plus operator serve in JavaScript?
 
-Joins two or more string values.
+It adds two values on the right and assigns the result to the variable on the left.
 
 - What data type is returned by comparing two values (`<`, `>`, `===`, etc)?
 
