@@ -22,18 +22,8 @@ const getLastElement = (array) => {
   return array[array.length - 1];
 };
 console.log('getLastElement:', getLastElement([true, true, false, true]));
-// function callOtherFunction (otherFunction: Function, params: unknown): unknown {
-//   return otherFunction(params);
-// };
-// function calcAverage (avg1: number[]): number {
-//   return (avg1[0] + avg1[1]) / 2;
-// }
-// callOtherFunction(calcAverage, [9, 7]);
 function callOtherFunction(otherFunction, params) {
   return otherFunction(params);
 }
-function calcAverage(avg1) {
-  return avg1 / 2;
-}
-console.log(callOtherFunction(calcAverage, 'hello'));
 console.log(callOtherFunction(convertMinutesToSeconds, 10));
+console.log(callOtherFunction(getLastElement, ['hello', 'Goodbye', 'Aloha']));
