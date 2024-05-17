@@ -1,4 +1,10 @@
 /* exported filterOutNulls */
 function filterOutNulls(values: any[]): number[] {
-  return values.filter((val) => val !== null);
+  const newArr = [];
+  for (let i = 0; i < values.length; i++) {
+    if (values[i]) {
+      newArr.push(values[i]);
+    }
+  }
+  return newArr;
 }

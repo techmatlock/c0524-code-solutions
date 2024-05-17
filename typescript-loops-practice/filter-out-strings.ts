@@ -1,4 +1,10 @@
 /* exported filterOutStrings */
 function filterOutStrings(values: any[]): number[] {
-  return values.filter((val) => typeof val !== 'string');
+  const newArr = [];
+  for (let i = 0; i < values.length; i++) {
+    if (typeof values[i] !== 'string') {
+      newArr.push(values[i]);
+    }
+  }
+  return newArr;
 }
