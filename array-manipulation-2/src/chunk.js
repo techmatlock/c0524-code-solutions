@@ -2,12 +2,14 @@
 /* exported chunk */
 function chunk(array, size) {
   const chunks = [];
-  console.log(size);
-  for (let i = 0; i < size; i++) {
-    // array[0] array[1] ; array[2] array[3]
-    console.log('i:', i);
-    chunks.push([array[i + size]]);
+  const chunk = [];
+  console.log('size', size);
+  for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < size; i++) {
+      chunk.push(array[i]);
+    }
   }
+  chunks.push(chunk);
   console.log('chunks', chunks);
   return chunks;
 }
