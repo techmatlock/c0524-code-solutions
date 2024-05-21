@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Coding Form</title>
+  </head>
+  <body>
+    <main>
+      <header><h1>Coding Form!</h1></header>
+      <form action="#">
+        <fieldset class="language">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="select">Why is coding cool?</label>
+          <select name="select" id="select">
+            <option value="">Select an option</option>
+            <option value="interesting">Because it's interesting</option>
+            <option value="fun">Because it's fun</option>
+            <option value="powerful">Because it's powerful</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="language">
+          <legend class="language__title">
+            Favorite Language (choose one)
+          </legend>
+          <input type="radio" id="html" name="language" />
+          <label for="html">HTML</label>
+          <input type="radio" id="css" name="language" />
+          <label for="css">CSS</label>
+          <input type="radio" id="javascript" name="language" />
+          <label for="javascript">JavaScript</label>
+        </fieldset>
+
+        <fieldset class="language">
+          <legend class="language__title">
+            Would you like to sign up for more information?
+          </legend>
+          <input type="checkbox" name="signup" id="signup" />
+          <label for="signup">Sign me up!</label><br />
+          <label for="comments">Comments</label>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"></textarea>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+input,
+select,
+textarea {
+  display: block;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  display: inline;
+  margin: 0 0.5rem;
+}
+
+fieldset {
+  border: none;
+}
+
+.language {
+  margin: 1rem 0;
+}
+
+.language__title {
+  margin: 1rem 0;
+}
+
+button {
+  margin: 0.5rem 0;
+}
