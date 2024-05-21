@@ -22,6 +22,10 @@ input[type='checkbox'] {
   margin: 0 0.5rem;
 }
 
+input[type='email'] {
+  width: 10rem;
+}
+
 fieldset {
   border: none;
 }
