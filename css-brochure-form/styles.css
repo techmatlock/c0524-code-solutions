@@ -1,0 +1,76 @@
+:root {
+  --clr-salmon: #fa8072;
+  --clr-salmon-hover: #ee4b2b;
+  --fs-13: 13px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Brandon Grotesque', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--clr-salmon);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  width: 700px;
+}
+
+select,
+input {
+  display: block;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset label > input {
+  margin-bottom: 0.5rem;
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #bebebe;
+}
+
+fieldset > label {
+  margin-left: 7rem;
+  text-transform: uppercase;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: var(--fs-13);
+  font-weight: 400;
+}
+
+fieldset label > select {
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+button {
+  margin-left: 21rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--clr-salmon);
+  color: #fff;
+  font-family: 'Brandon Grotesque', sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: var(--clr-salmon-hover);
+}
