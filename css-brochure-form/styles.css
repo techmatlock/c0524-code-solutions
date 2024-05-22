@@ -1,7 +1,7 @@
 :root {
-  --clr-salmon: #fa8072;
-  --clr-salmon-hover: #ee4b2b;
-  --fs-13: 13px;
+  --clr-salmon: #ee4b2b;
+  --clr-salmon-hover: #fa8072;
+  --fs-12: 12px;
 }
 
 body {
@@ -9,12 +9,11 @@ body {
   flex-direction: column;
 }
 
-h1 {
+h3 {
   display: flex;
   justify-content: center;
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: AtlasGrotesk, sans-serif;
   text-transform: uppercase;
-  font-weight: normal;
   color: var(--clr-salmon);
 }
 
@@ -38,29 +37,28 @@ fieldset {
 
 fieldset label > input {
   margin-bottom: 0.5rem;
-  width: 20rem;
+  width: 30rem;
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #bebebe;
 }
 
 fieldset > label {
-  margin-left: 7rem;
+  margin-left: 0.5rem;
   text-transform: uppercase;
   font-family: 'Brandon Grotesque', sans-serif;
-  font-size: var(--fs-13);
-  font-weight: 400;
+  font-size: var(--fs-12);
 }
 
 fieldset label > select {
-  width: 20rem;
+  width: 30rem;
   padding: 0.5rem;
   border-radius: 5px;
   background-color: #f2f2f2;
 }
 
 button {
-  margin-left: 21rem;
+  margin-left: 25rem;
   margin-top: 0.5rem;
   padding: 0.4rem 1.2rem;
   border-radius: 15px;
