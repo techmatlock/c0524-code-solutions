@@ -3,17 +3,14 @@
   margin: 0 auto;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  padding-right: 50rem;
-}
-
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20rem;
+}
+
+img {
+  width: 100%;
 }
 
 .column-third {
