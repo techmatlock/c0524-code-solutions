@@ -6,7 +6,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is the **default** value for the `position` property of HTML elements?
 
-Relative.
+Static.
 
 - How does setting `position: relative` on an element affect document flow?
 
