@@ -1,17 +1,15 @@
 /* exported chunk */
 function chunk(array: unknown[], size: number): unknown[] {
-  const chunks = [];
-  const chunk = [];
-
-  console.log('size', size);
+  // create sub arrays as chunks based on size
+  // push chunks into final array
+  const chunks: any[] = [];
 
   for (let i = 0; i < array.length; i++) {
-    for (let i = 0; i < size; i++) {
-      chunk.push(array[i]);
+    if (i % size === 0) {
+      chunks.push([]);
     }
+    // access last chunks index and push element
+    chunks[chunks.length - 1].push(array[i]);
   }
-
-  chunks.push(chunk);
-  console.log('chunks', chunks);
   return chunks;
 }
