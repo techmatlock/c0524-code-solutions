@@ -10,11 +10,11 @@ Static.
 
 - How does setting `position: relative` on an element affect document flow?
 
-Modifies the position of the element but keeps it in the document flow.
+It doesn't unless you set an offset value (top, right, bottom, left)
 
 - How does setting `position: relative` on an element affect where it appears on the page?
 
-You can modify its final position, including making it overlap other elements on the page.
+It doesn't unless you set an offset value (top, right, bottom, left)
 
 - How does setting `position: absolute` on an element affect document flow?
 
@@ -22,7 +22,7 @@ It moves the element out of the document flow.
 
 - How does setting `position: absolute` on an element affect where it appears on the page?
 
-It appears based on the containing elements sides.
+It moves the element out of the document flow.
 
 - How do you constrain an absolutely positioned element to a containing block?
 
