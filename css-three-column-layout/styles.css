@@ -1,0 +1,48 @@
+:root {
+  --ff-roboto: 'Roboto', sans-serif;
+  --fs-13: 13px;
+}
+
+.container {
+  background-color: #1a96da;
+  font-family: var(--ff-roboto);
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+img {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+p {
+  font-size: var(--fs-13);
+  text-align: center;
+}
+
+.heading-padding {
+  padding-top: 2rem;
+}
+
+.features-padding {
+  padding: 1rem 2rem 2rem;
+}
+
+.icon-margin {
+  margin: 0 3rem;
+}
+
+.column-third {
+  flex-basis: calc(100% / 3);
+}
