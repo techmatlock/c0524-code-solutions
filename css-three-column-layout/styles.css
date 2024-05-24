@@ -31,6 +31,10 @@ img {
   padding-left: 0.2rem;
 }
 
+h4 {
+  display: inline;
+}
+
 p {
   font-size: var(--fs-13);
   text-align: center;
@@ -45,7 +49,7 @@ p {
 }
 
 .icon-margin {
-  margin: 0 3rem;
+  margin: 1rem 4rem;
 }
 
 .column-third {
