@@ -31,21 +31,18 @@ img {
   padding-left: 0.2rem;
 }
 
-h4 {
-  display: inline;
-}
-
 p {
   font-size: var(--fs-13);
   text-align: center;
+  padding-top: 1rem;
 }
 
 .heading-padding {
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 
 .features-padding {
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 2rem 3rem;
 }
 
 .icon-margin {
