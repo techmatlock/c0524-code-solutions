@@ -1,0 +1,141 @@
+:root {
+  --clr-primary-gray: #6e6e6e;
+  --clr-accent-blue: #0b4264;
+}
+
+body {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin-right: 8rem;
+  font-family: Avenir, sans-serif;
+  list-style-type: none;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #7f7f7f;
+}
+
+.nav-link:nth-child(5) a {
+  padding: 0.5rem;
+  background-color: var(--clr-accent-blue);
+  color: #fff;
+  border-radius: 0.2rem;
+}
+
+.logo-img {
+  width: 7rem;
+  height: 4rem;
+  margin-left: 8rem;
+}
+
+.hero-img {
+  position: relative;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  width: 90rem;
+  height: 45rem;
+  margin: 5rem auto;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+  position: absolute;
+  inset: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
+  color: #fff;
+}
+
+h1 {
+  padding-bottom: 1rem;
+}
+
+.hero-text {
+  font-family: Avenir, sans-serif;
+  width: 40%;
+  line-height: 2rem;
+  font-size: 16px;
+}
+
+.hero-btn {
+  background-color: var(--clr-accent-blue);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+}
+
+.clinicians-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 15rem;
+  background-color: #fafafa;
+  color: var(--clr-primary-gray);
+}
+
+.clinicians-title {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.clinicians-text {
+  font-family: Avenir, sans-serif;
+}
+
+.clinician-item {
+  list-style-type: none;
+  padding: 1rem 0;
+  font-family: Avenir, sans-serif;
+}
+
+.learn__more-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.learn__more-content {
+  margin-left: 6rem;
+  color: var(--clr-primary-gray);
+}
+
+.learn__more-content > p {
+  padding-top: 0.5rem;
+  font-family: Avenir, sans-serif;
+  font-size: 12px;
+}
+
+.learn__more-btn {
+  padding: 0.25rem 3.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--clr-accent-blue);
+  color: #fff;
+  margin-right: 6rem;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
