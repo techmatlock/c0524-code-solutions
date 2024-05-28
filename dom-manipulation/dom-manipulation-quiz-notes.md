@@ -26,9 +26,11 @@ No, if you already have an element reference stored in a variable, the event par
 
 - Would this assignment be simpler or more complicated if we didn't use a variable to keep track of the number of clicks?
 
-It would be harder because you need the variable to test conditions and access event properties to manipulate the element.
+It would be harder because you can't test conditions and manipulate elements in the DOM.
 
 - Why is storing information about a program in variables better than only storing it in the DOM?
+
+The DOM won't store the number of clicks.
 
 ## Notes
 
