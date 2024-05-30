@@ -16,7 +16,7 @@ function handleSubmit(event: Event): void {
   const $inputEmail = $formElements.email.value;
   const $message = $formElements.message.value;
 
-  const result = { name: $inputName, email: $inputEmail, message: $message };
+  const result = { $inputName, $inputEmail, $message };
 
   console.log(result);
 
