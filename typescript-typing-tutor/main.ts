@@ -19,10 +19,9 @@ const $spanElements = document.querySelectorAll('span');
 let currentIndex = 0;
 let count = 1;
 let guessedCorrect = 0;
-const numOfSpanElements = $spanElements.length;
 
 function calculateAccuracy(): void {
-  const accuracy = guessedCorrect / numOfSpanElements;
+  const accuracy = (guessedCorrect / count) * 100;
   console.log(accuracy);
 }
 
@@ -32,7 +31,7 @@ function trackCharacter(event: KeyboardEvent): void {
     return;
   }
 
-  // Every time key entered even if wrong
+  // Track every time key entered even if wrong.
   count++;
 
   if (event.key === $spanElements[currentIndex].textContent) {
