@@ -30,11 +30,19 @@ Refreshes the page or navigates to the form's action URL.
 
 - What property of a form element object contains all of the form's controls.
 
+elements
+
 - What property of a form control object gets and sets its value?
+
+value property.
 
 - What is one risk of writing a lot of code without checking to see if it works so far?
 
+You risk accruing more bugs instead of finding them earlier on.
+
 - What is an advantage of having your console open when writing a JavaScript program?
+
+You can make sure you're getting the expected output from your code.
 
 ## Notes
 
