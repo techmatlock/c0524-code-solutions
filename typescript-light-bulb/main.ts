@@ -13,8 +13,12 @@ console.log($bodyElement);
 console.log($sunElement);
 
 function handleClick(): void {
-  $bodyElement?.classList.toggle('dark-background');
-  $sunElement?.classList.toggle('dark-sun');
+  if (!$bodyElement) throw new Error('$bodyElement not found.');
+  if (!$sunElement) throw new Error('$sunElement not found.');
+
+  $bodyElement.classList.toggle('dark-background');
+  $sunElement.classList.toggle('dark-sun');
 }
 
-$sunElement?.addEventListener('click', handleClick);
+if (!$sunElement) throw new Error('$sunElement not found.');
+$sunElement.addEventListener('click', handleClick);
