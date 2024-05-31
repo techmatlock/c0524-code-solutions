@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sun {
+  display: relative;
+  width: 15rem;
+  height: 15rem;
+  background-color: #fdfd96;
+  box-shadow: yellow 0 0 5px 2px;
+  border-radius: 50%;
+}
+
+.dark-background {
+  background-color: #111;
+}
+
+.dark-sun {
+  background-color: #222;
+  box-shadow: inset black 0 15px;
+}
