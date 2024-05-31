@@ -17,7 +17,7 @@ I can't figure out how to only stop game after key pressed on index 25
 
 const $spanElements = document.querySelectorAll('span');
 let currentIndex = 0;
-let count = 1;
+let count = 0;
 let guessedCorrect = 0;
 
 function calculateAccuracy(): void {
@@ -26,7 +26,9 @@ function calculateAccuracy(): void {
 }
 
 function trackCharacter(event: KeyboardEvent): void {
-  if (count >= $spanElements.length) {
+  console.log('currentIndex:', currentIndex);
+  console.log('spanElements:', $spanElements.length);
+  if (currentIndex >= $spanElements.length - 1) {
     calculateAccuracy();
     return;
   }
