@@ -26,13 +26,6 @@ function calculateAccuracy(): void {
 }
 
 function trackCharacter(event: KeyboardEvent): void {
-  console.log('currentIndex:', currentIndex);
-  console.log('spanElements:', $spanElements.length);
-  if (currentIndex >= $spanElements.length - 1) {
-    calculateAccuracy();
-    return;
-  }
-
   // Track every time key entered even if wrong.
   count++;
 
@@ -49,6 +42,9 @@ function trackCharacter(event: KeyboardEvent): void {
     $spanElements[currentIndex + 1].classList.add('border-bottom');
 
     currentIndex++;
+    if (currentIndex >= $spanElements.length - 1) {
+      calculateAccuracy();
+    }
   } else {
     $spanElements[currentIndex].classList.add('red-color');
     $spanElements[currentIndex].classList.add('border__bottom-red');
