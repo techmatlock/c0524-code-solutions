@@ -7,6 +7,7 @@ if (!$tabElements) throw new Error('$tabElements does not exist');
 if (!$viewElements) throw new Error('$viewElements does not exist');
 function handleClick(event) {
   const $eventTarget = event.target;
+  if (!$eventTarget.matches('.tab')) return;
   if ($eventTarget.matches('.tab')) {
     $tabElements.forEach((tab) => {
       tab.classList.remove('active');

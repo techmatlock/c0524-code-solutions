@@ -9,6 +9,8 @@ if (!$viewElements) throw new Error('$viewElements does not exist');
 function handleClick(event: Event): void {
   const $eventTarget = event.target as HTMLDivElement;
 
+  if (!$eventTarget.matches('.tab')) return;
+
   if ($eventTarget.matches('.tab')) {
     $tabElements.forEach((tab) => {
       tab.classList.remove('active');
