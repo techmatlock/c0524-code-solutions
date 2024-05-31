@@ -12,10 +12,17 @@
 6. Check to see if currentIndex is greater than $spanElements.length. If so, game over.
 7. Calculate accuracy by taking the sum of correct guesses divided by the total length of $spanElements
 
-I can't figure out how to only stop game after key pressed on index 25
+Adding a modal
+1. Create the variables for the modal window, the yes button, and the no button that reference the DOM elements.
+   * If user selects yes to play again, reset currentIndex, accuracy, count, guessedCorrect
+   * If no, close modal and don't reset any variables.
+2. Add event listeners for the yes and no button.
+3. Add the CSS for the modal window and add the dialog element in the HTML.  Add accuracy score to modal window.
 */
 
 const $spanElements = document.querySelectorAll('span');
+const $modal = document.querySelector('dialog');
+
 let currentIndex = 0;
 let count = 0;
 let guessedCorrect = 0;
@@ -23,6 +30,8 @@ let guessedCorrect = 0;
 function calculateAccuracy(): void {
   const accuracy = (guessedCorrect / count) * 100;
   console.log(accuracy);
+  if (!$modal) throw new Error('$modal does not exist');
+  $modal?.showModal();
 }
 
 function trackCharacter(event: KeyboardEvent): void {

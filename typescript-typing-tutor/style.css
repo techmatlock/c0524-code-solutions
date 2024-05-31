@@ -38,3 +38,12 @@ body {
 .red-color {
   color: #f00;
 }
+
+dialog {
+  margin: auto;
+  padding: 3rem;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
