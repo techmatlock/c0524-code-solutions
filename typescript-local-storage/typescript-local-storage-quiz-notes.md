@@ -6,9 +6,15 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How do you store data in `localStorage`?
 
+By serializing data and then using setItem method.
+
 - How do you retrieve data from `localStorage`?
 
+Using the getItem method.
+
 - What data type can `localStorage` save in the browser?
+
+JSON
 
 - When does the `'beforeunload'` event fire on the `window` object?
 
