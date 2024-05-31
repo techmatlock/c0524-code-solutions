@@ -18,6 +18,8 @@ JSON
 
 - When does the `'beforeunload'` event fire on the `window` object?
 
+When the window, the document and its resources are about to be unloaded. Before the page refreshes.
+
 ## Notes
 
 All student notes should be written here.
