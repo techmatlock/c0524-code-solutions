@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30rem auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-fourth {
+  flex-basis: 25%;
+}
+
+.column-two-fourth {
+  flex-basis: 50%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
