@@ -38,10 +38,19 @@ $leftNavigator.addEventListener('click', (): void => {
     if (img.includes($currentImg)) {
       const newIndex = images.indexOf($currentImg);
       if (newIndex === 0) {
-        $currentImage.src = images[images.length - 1];
+        count = images.length - 1;
+        $currentImage.src = images[count];
       } else {
-        $currentImage.src = images[newIndex - 1];
+        count = newIndex - 1;
+        $currentImage.src = images[count];
       }
+    }
+  });
+
+  $allDots.forEach((dot) => {
+    dot.classList.remove('solid');
+    if (dot.getAttribute('data-item-id') === count.toString()) {
+      dot.classList.add('solid');
     }
   });
   intervalID = setInterval(nextImage, 3000);
@@ -58,12 +67,24 @@ $rightNavigator.addEventListener('click', (): void => {
 
   images.forEach((img) => {
     if (img.includes($currentImg)) {
-      const newIndex = img.indexOf($currentImg);
+      const newIndex = images.indexOf($currentImg);
       count = newIndex + 1;
-      $currentImage.src = images[count];
-      intervalID = setInterval(nextImage, 3000);
+      if (count > images.length - 1) {
+        $currentImage.src = images[0];
+        count = 0;
+      } else {
+        $currentImage.src = images[count];
+      }
     }
   });
+
+  $allDots.forEach((dot) => {
+    dot.classList.remove('solid');
+    if (dot.getAttribute('data-item-id') === count.toString()) {
+      dot.classList.add('solid');
+    }
+  });
+  intervalID = setInterval(nextImage, 3000);
 });
 
 $dotsContainer.addEventListener('click', (event: Event): void => {
@@ -83,16 +104,18 @@ $dotsContainer.addEventListener('click', (event: Event): void => {
       dot.classList.remove('solid');
       if (dot.getAttribute('data-item-id') === itemId) {
         dot.classList.add('solid');
-        intervalID = setInterval(nextImage, 3000);
       }
     });
   }
+  intervalID = setInterval(nextImage, 3000);
 });
 
 function nextImage(): void {
   if (count > images.length - 1) {
     count = 0;
   }
+
+  const $allDots = document.querySelectorAll('.dot');
 
   $allDots.forEach((dot) => {
     dot.classList.remove('solid');
