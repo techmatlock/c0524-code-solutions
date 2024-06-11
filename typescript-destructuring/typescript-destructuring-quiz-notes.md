@@ -10,11 +10,15 @@ Allows for more concise and readable code, enabling you to extract multiple prop
 
 - What is the syntax for `Object` destructuring?
 
-const {variable1, variable2} = object
+const {variable1, variable2} = object;
 
 - What is the syntax for `Array` destructuring?
 
+const [variable1, variable2, variable3] = array;
+
 - How can you tell the difference between destructuring and creating `Object`/`Array` literals?
+
+The use of curly braces or brackets for the variables being assigned.
 
 ## Notes
 
