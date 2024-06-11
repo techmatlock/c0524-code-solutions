@@ -8,7 +8,6 @@ if (!$currentImage) throw new Error('No $currentImage found.');
 if (!$leftNavigator) throw new Error('No $leftNavigator found.');
 if (!$rightNavigator) throw new Error('No $rightNavigator found.');
 if (!$allDots) throw new Error('No $allDots found.');
-if (!$allDots) throw new Error('No $dotsContainer found.');
 const images = [
   'images/001.png',
   'images/004.png',
@@ -63,19 +62,20 @@ $dotsContainer.addEventListener('click', (event) => {
   if (!$eventTarget) throw new Error('No $eventTarget found');
   if ($eventTarget.matches('.dot')) {
     const itemId = $eventTarget.getAttribute('data-item-id');
-    $currentImage.src = images[itemId];
+    if (itemId === null) return;
+    if (itemId) {
+      $currentImage.src = images[+itemId];
+    }
     $allDots.forEach((dot) => {
       dot.classList.remove('solid');
       if (dot.getAttribute('data-item-id') === itemId) {
         dot.classList.add('solid');
+        setInterval(nextImage, 3000);
       }
     });
-    setInterval(nextImage, 3000);
   }
 });
 function nextImage() {
-  clearInterval(intervalID);
-  clear;
   if (count > images.length - 1) {
     count = 0;
   }
