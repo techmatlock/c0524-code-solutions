@@ -51,9 +51,7 @@ const library: Book[] = [
   },
 ];
 
-const book3 = library[0];
-const book4 = library[1];
-const book5 = library[2];
+const [book3, book4, book5] = library;
 
 console.log(book3, book4, book5);
 
