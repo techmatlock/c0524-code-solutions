@@ -4,5 +4,5 @@ values.forEach((val) => console.log(val));
 
 values.forEach((val, idx, arr) => {
   val = arr[arr.length - 1 - idx];
-  console.log('val:', val);
+  console.log(val);
 });
