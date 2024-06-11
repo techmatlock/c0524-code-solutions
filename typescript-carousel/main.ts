@@ -23,15 +23,10 @@ const images: string[] = [
 
 let count: number = 0;
 
-const intervalID = setInterval(nextImage, 3000);
-
-const timeoutID = setTimeout(() => {
-  nextImage();
-}, 3000);
+let intervalID = setInterval(nextImage, 3000);
 
 $leftNavigator.addEventListener('click', (): void => {
   clearInterval(intervalID);
-  clearTimeout(timeoutID);
 
   const $currentImage = document.querySelector('.new-img') as HTMLImageElement;
   if (!$currentImage) throw new Error('No $newImg found.');
@@ -47,14 +42,13 @@ $leftNavigator.addEventListener('click', (): void => {
       } else {
         $currentImage.src = images[newIndex - 1];
       }
-      setInterval(nextImage, 3000);
     }
   });
+  intervalID = setInterval(nextImage, 3000);
 });
 
 $rightNavigator.addEventListener('click', (): void => {
   clearInterval(intervalID);
-  clearTimeout(timeoutID);
 
   const $currentImage = document.querySelector('.new-img') as HTMLImageElement;
   if (!$currentImage) throw new Error('No $newImg found.');
@@ -67,14 +61,13 @@ $rightNavigator.addEventListener('click', (): void => {
       const newIndex = img.indexOf($currentImg);
       count = newIndex + 1;
       $currentImage.src = images[count];
-      setInterval(nextImage, 3000);
+      intervalID = setInterval(nextImage, 3000);
     }
   });
 });
 
 $dotsContainer.addEventListener('click', (event: Event): void => {
   clearInterval(intervalID);
-  clearTimeout(timeoutID);
 
   const $eventTarget = event.target as HTMLElement;
   if (!$eventTarget) throw new Error('No $eventTarget found');
@@ -90,7 +83,7 @@ $dotsContainer.addEventListener('click', (event: Event): void => {
       dot.classList.remove('solid');
       if (dot.getAttribute('data-item-id') === itemId) {
         dot.classList.add('solid');
-        setInterval(nextImage, 3000);
+        intervalID = setInterval(nextImage, 3000);
       }
     });
   }
