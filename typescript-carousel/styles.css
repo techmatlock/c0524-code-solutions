@@ -5,12 +5,17 @@
 }
 
 .container {
-  max-width: 900px;
-  margin: 30rem auto;
+  max-width: 1200px;
+  margin: 10rem auto;
 }
 
 .row {
   display: flex;
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .column-full {
@@ -25,10 +30,18 @@
   flex-basis: 50%;
 }
 
-.space-between {
-  justify-content: space-between;
+.align-center {
+  align-items: center;
 }
 
-.align-stretch {
-  align-items: stretch;
+.dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+.solid {
+  background-color: #000;
 }
