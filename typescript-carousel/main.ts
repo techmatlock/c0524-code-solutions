@@ -84,11 +84,20 @@ $dotsContainer.addEventListener('click', (event: Event): void => {
     const itemId = $eventTarget.getAttribute('data-item-id');
     $currentImage.src = images[itemId];
 
+    $allDots.forEach((dot) => {
+      dot.classList.remove('solid');
+      if (dot.getAttribute('data-item-id') === itemId) {
+        dot.classList.add('solid');
+      }
+    });
     setInterval(nextImage, 3000);
   }
 });
 
 function nextImage(): void {
+  clearInterval(intervalID);
+  clearTimeout(timeoutID);
+
   if (count > images.length - 1) {
     count = 0;
   }

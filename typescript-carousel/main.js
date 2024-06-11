@@ -64,10 +64,18 @@ $dotsContainer.addEventListener('click', (event) => {
   if ($eventTarget.matches('.dot')) {
     const itemId = $eventTarget.getAttribute('data-item-id');
     $currentImage.src = images[itemId];
+    $allDots.forEach((dot) => {
+      dot.classList.remove('solid');
+      if (dot.getAttribute('data-item-id') === itemId) {
+        dot.classList.add('solid');
+      }
+    });
     setInterval(nextImage, 3000);
   }
 });
 function nextImage() {
+  clearInterval(intervalID);
+  clear;
   if (count > images.length - 1) {
     count = 0;
   }
