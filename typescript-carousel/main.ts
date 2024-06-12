@@ -98,9 +98,7 @@ $dotsContainer.addEventListener('click', (event: Event): void => {
   const itemId = $eventTarget.getAttribute('data-item-id');
 
   if (!itemId) return;
-  if (itemId) {
-    $currentImage.src = images[+itemId];
-  }
+  $currentImage.src = images[+itemId];
 
   $allDots.forEach((dot) => {
     dot.classList.remove('solid');
