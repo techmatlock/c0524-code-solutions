@@ -8,7 +8,7 @@ Answer the following questions in the provided markdown file before turning in t
   - What does `Array.forEach` do?
     Executes a provided function once for each array element
   - What should the callback function do?
-    Execute on each element
+    Execute on each element. Its return value is discarded.
   - What is `Array.forEach` useful for?
     For not returning any value. Not creating a copy.
 - `Array.map`:
