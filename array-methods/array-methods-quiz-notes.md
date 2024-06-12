@@ -10,7 +10,7 @@ Answer the following questions in the provided markdown file before turning in t
   - What should the callback function do?
     Execute on each element. Its return value is discarded.
   - What is `Array.forEach` useful for?
-    For not returning any value. Not creating a copy.
+    For not returning any value. Typical use case is to execute side effects at the end of a chain.
 - `Array.map`:
   - What does `Array.map` do?
     Creates a new array populated with the results of calling a provided function on every element in the calling array.
