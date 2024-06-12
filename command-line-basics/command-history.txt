@@ -1,0 +1,500 @@
+   67  npx tsc --watch
+   68  git add .
+   69  git commit -m "Added flex-basis and moved styling to styles.css"
+   70  git add .
+   71  git commit -m "Replaced column-half class to padding-lr for form elements"
+   72  clear
+   73  git commit --amend -m "Replaced column-half class to padding-lr for form elements"
+   74  git add .
+   75  git commit --amend -m "Replaced column-half class to padding-lr for form elements"
+   76  git push origin issue-1-create-an-entry 
+   77  git add .
+   78  git commit -m "Assigned data.nextEntryId to variable entryId"
+   79  git push origin issue-1-create-an-entry 
+   80  clear
+   81  git switch main
+   82  git pull
+   83  clear
+   84  git pull
+   85  git pull
+   86  clear
+   87  git branch issue-2-view-entries
+   88  git switch issue-2-view-entries 
+   89  npx tsc --watch
+   90  git add .
+   91  git commit -m "Added ul, dummy journal entries, and responsiveness. #1/2/3"
+   92  git push origin issue-2-view-entries 
+   93  clear
+   94  git add .
+   95  git commit -m "Added renderEntry function to return a DOM tree. #4"
+   96  git commit -m "Added renderEntry function to return a DOM tree. #4" --no-verify
+   97  git push origin issue-2-view-entries 
+   98  clear
+   99  git add .
+  100  git commit -m "Add event listener to ul element and assigned entry object to data.editing. #2"
+  101  git push origin issue-3-edit-entry 
+  102  clear
+  103  git add .
+  104  git commit -m "Changed append to prepend to ul element after submit event."
+  105  git push origin issue-3-edit-entry 
+  106  clear
+  107  git add .
+  108  git commit -m "Replaced original li with new li with new DO tree"
+  109  clear
+  110  git push origin issue-3-edit-entry 
+  111  clear
+  112  git add .
+  113  git commit -m "Set $newBtn to update DOM content and reset form"
+  114  git push origin issue-3-edit-entry 
+  115  clear
+  116  git add .
+  117  git commit -m "Added media query for journal-form"
+  118  git push origin issue-3-edit-entry 
+  119  clear
+  120  git switch main
+  121  git pull
+  122  git pull
+  123  clear
+  124  git branch issue-4-delete-entry
+  125  git switch issue-4-delete-entry 
+  126  clear
+  127  git add .
+  128  git add .
+  129  git commit -m "Add delete button to edit entry form. #1"
+  130  git push origin issue-4-delete-entry 
+  131  clear
+  132  git add .
+  133  git commit -m "Show confirmation modal when user clicks delete entry. #2"
+  134  clear
+  135  git push origin issue-4-delete-entry 
+  136  clear
+  137  git add .
+  138  git commit -m "Hide modal if user clicks cancel"
+  139  git commit -m "Hide modal if user clicks cancel" --no-verify
+  140  git push origin issue-4-delete-entry 
+  141  clear
+  142  git add .
+  143  git commit -m "Created DOMContentLoaded event listener. #5"
+  144  git commit -m "Created DOMContentLoaded event listener. #5"
+  145  clear
+  146  git add .
+  147  git commit -m "Created DOMContentLoaded event listener. #5"
+  148  git add .
+  149  git commit --amend -m "Created DOMContentLoaded event listener. #5"
+  150  git push origin issue-2-view-entries 
+  151  git add .
+  152  git commit -m "Removed example entries. #6"
+  153  git add .
+  154  git commit -m "Removed example entries. #6"
+  155  git push origin issue-2-view-entries 
+  156  clear
+  157  git add .
+  158  git commit -m "Added toggleNoEntries function. #7"
+  159  clear
+  160  git push orign issue-2-view-entries 
+  161  git push origin issue-2-view-entries 
+  162  clear
+  163  git add .
+  164  git commit -m "Added viewSwap function to swap view property on data object. #8"
+  165  clear
+  166  git push origin issue-2-view-entries 
+  167  clear
+  168  git add .
+  169  git commit -m "Fixed viewSwap function logic to hide or unhide div. #7"
+  170  git push origin issue-2-view-entries 
+  171  git add .
+  172  git commit -m "Removed unecessary querySelectors. #7"
+  173  git push origin issue-2-view-entries 
+  174  clear
+  175  git add .
+  176  git commit -m "Added anchor to show entries view with viewSwap function. #8"
+  177  git push origin issue-2-view-entries 
+  178  clear
+  179  git add .
+  180  git commit -m "Create anchor for new button and link to entry-form view. #9"
+  181  clear
+  182  git push origin issue-2-view-entries 
+  183  clear
+  184  git add .
+  185  git commit -m "Added DOM tree rendering and view swap for submit callback. #10"
+  186  clear
+  187  git push origin issue-2-view-entries 
+  188  git add .
+  189  git commit -m "Added view swap and no entry toggling to DOMContentLoaded. #11"
+  190  git push origin issue-2-view-entries 
+  191  clear
+  192  git add .
+  193  git commit -m "Added cursor pointer to links, desktop positioning fixed, and fixed toggleNoEntries"
+  194  git push origin issue-2-view-entries 
+  195  git switch main
+  196  git switch main
+  197  git pull
+  198  git pull
+  199  clear
+  200  git branch issue-3-edit-entry
+  201  git switch issue-3-edit-entry 
+  202  git add .
+  203  git commit -m "Added pencil icon and data-entry-id attribute to li. #1"
+  204  git push origin issue-3-edit-entry 
+  205  clear
+  206  npx tsc --watch
+  207  npx tsc --watch
+  208  git add .
+  209  git commit -m "Add hidden class to non matching search entries. #3"
+  210  git push origin issue-5-search 
+  211  git add .
+  212  git commit -m "Moved search input rules to styles.css"
+  213  clear
+  214  git push origin issue-5-search 
+  215  git push origin issue-5-search 
+  216  clear
+  217  git add .
+  218  git commit -m "Added delete functionality to modal when confirm button clicked. #4"
+  219  clear
+  220  git push origin issue-4-delete-entry 
+  221  clear
+  222  git add .
+  223  git commit -m "Added assign null to data.editing when entries link clicked"
+  224  clear
+  225  git push origin issue-4-delete-entry 
+  226  clear
+  227  git stash save
+  228  clear
+  229  git switch main
+  230  git pull
+  231  clear
+  232  git switch issue-4-delete-entry 
+  233  git stash pop
+  234  git branch issue-5-search
+  235  git switch issue-5-search 
+  236  clear
+  237  git add .
+  238  git commit -m "Added search input and search icon to entries page. #1"
+  239  clear
+  240  git push origin issue-5-search 
+  241  clear
+  242  git add .
+  243  git commit -m "Added search event listener and variables for dom elements. #2"
+  244  clear
+  245  git push origin issue-5-search 
+  246  npx tsc --watch
+  247  cd /workspaces
+  248  clear
+  249  git clone git@github.com:kepsteen/week-planner.git
+  250  cd week-planner/
+  251  npm install
+  252  code .
+  253  code .
+  254  ls
+  255  pwd
+  256  clear
+  257  pwd
+  258  code .
+  259  cd ../week-planner/
+  260  code .
+  261  git push origin main
+  262  git add .
+  263  git commit -m "time to go home"
+  264  git push origin main
+  265  clear
+  266  npx tsc --watch
+  267  git add .
+  268  git commit -m "lunch on katelyn"
+  269  git commit -m "lunch on katelyn" --no-verify
+  270  git push origin main
+  271  clear
+  272  git pull
+  273  clear
+  274  git add .
+  275  git commit -m "dislay: grid"
+  276  git commit -m "dislay: grid" --no-verify
+  277  git push origin main
+  278  clear
+  279  git pull
+  280  clear
+  281  npx tsc --watch
+  282  git pull
+  283  git pull
+  284  git pull origin main
+  285  git pull origin main
+  286  clear
+  287  git pull
+  288  clear
+  289  git add .
+  290  git commit -m "Added modal" --no-verify
+  291  git push origin main
+  292  git add .
+  293  git commit -m "Added military time" --no-verify
+  294  git push origin main
+  295  clear
+  296  npx tsc --watch
+  297  git add .
+  298  git commit -m "Changed element attribute from data-itemId to data-item-id"
+  299  git push origin main
+  300  clear
+  301  git add .
+  302  git commit -m "Added edit to replace data in array"
+  303  git push origin main
+  304  clear
+  305  git add .
+  306  git commit -m "Added submit event if data.editing object not null"
+  307  clear
+  308  git log
+  309  git reset  4a016b5e67c24c8afcec24995a7b9f7a37e7cffd
+  310  git push -f origin main
+  311  clear
+  312  git pull
+  313  git add .
+  314  git commit -m "Changed data-item-id to be on row instead of on each button. Added edit logic if not null for submit event" 
+  315  git push origin main
+  316  clear
+  317  git add .
+  318  git commit -m "
+  319  Removed sample data from table"
+  320  git push origin main
+  321  clear
+  322  npx tsc --watch
+  323  git branch practice-interview-challenge
+  324  git switch practice-interview-challenge 
+  325  cd practice-interview-challenge/
+  326  npx tsc --watch
+  327  git add .
+  328  git commit -m "Completed practice-interview-challenge"
+  329  git push origin practice-interview-challenge 
+  330  clear
+  331  clear
+  332  git switch main
+  333  git switch main
+  334  clear
+  335  git switch main
+  336  git pull
+  337  clear
+  338  git add .
+  339  git commit -m "Completed typescript-timers exercise"
+  340  clear
+  341  git push origin typescript-timers 
+  342  clear
+  343  git add .
+  344  git commit -m "Completed q&a answers"
+  345  git push origin typescript-timers 
+  346  git add .
+  347  git commit -m "Moved queryselector to global space"
+  348  git push origin typescript-timers 
+  349  clear
+  350  git switch main
+  351  git pull
+  352  clear
+  353  git branch typescript-timers
+  354  git switch typescript-timers 
+  355  cd typescript-timers/
+  356  npx tsc --watch
+  357  npx tsc --watch
+  358  npx tsc --watch
+  359  git add .
+  360  git commit -m '
+  361  Completed typescript-destructuring exercise'
+  362  git push origin typescript-destructuring 
+  363  clear
+  364  git add .
+  365  git commit -m "Added Q&A answers"
+  366  git push origin typescript-destructuring 
+  367  clear
+  368  git switch typescript-carousel 
+  369  git switch typescript-destructuring 
+  370  clear
+  371  git add typescript-destructuring 
+  372  git commit -m "Removed typescript-carousel from typescript-destructuring"
+  373  git push origin typescript-destructuring 
+  374  git add typescript-destructuring/
+  375  git commit -m "Removed typescript-carousel from typescript-destructuring"
+  376  git add typescript-carousel 
+  377  git commit -m "Removed typescript-carousel from typescript-destructuring"
+  378  git push origin typescript-destructuring 
+  379  clear
+  380  git switch typescript-carousel 
+  381  clear
+  382  git add typescript-carousel/
+  383  git commit -m "Added deleted folder"
+  384  git add typescript-carousel/
+  385  git commit -m "Added deleted folder"
+  386  git push origin typescript-carousel 
+  387  clear
+  388  git add typescript-carousel/
+  389  git commit -m "Removed typescript-carousel folder"
+  390  git push origin typescript-carousel 
+  391  cd typescript-carousel/
+  392  npx tsc --watch
+  393  git add .
+  394  git commit -m 'Working on dot carousel event listener"
+  395  git commit -m 'Working on dot carousel event listener"
+  396  ;
+  397  git commit -m 'Working on dot carousel event listener'
+  398  git push origin typescript-carousel 
+  399  git branch typescript-destructuring
+  400  git switch typescript-destructuring 
+  401  cd typescript-destructuring/
+  402  clear
+  403  npx tsc --watch
+  404  cd ..
+  405  clear
+  406  git add .
+  407  git commit -m "Added conditional for itemId"
+  408  git push origin typescript-carousel 
+  409  clear
+  410  git switch typescript-destructuring 
+  411  clear
+  412  git add .
+  413  git commit -m "Fixed array destructuring for book3, book4, book5"
+  414  git push origin typescript-destructuring 
+  415  clear
+  416  git switch typescript-carousel 
+  417  cd typescript-carousel/
+  418  npx tsc --watch
+  419  git add .
+  420  git commit -m "Added intervalID assignment"
+  421  clear
+  422  git push origin typescript-carousel 
+  423  clear
+  424  git switch main
+  425  git branch typescript-operators-and-expressions 
+  426  git branch typescript-operators
+  427  git switch typescript-operators
+  428  clear
+  429  cd typescript-operators
+  430  npx tsc --watch
+  431  cd typescript-carousel/
+  432  npx tsc --watch
+  433  clear
+  434  cd ..
+  435  git add .
+  436  git commit -m "Save for later"
+  437  git commit -m "Save for later" --no-verify
+  438  clear
+  439  git push origin typescript-operators
+  440  clear
+  441  git switch typescript-carousel 
+  442  cd typescript-carousel/
+  443  npx tsc --watch
+  444  git add .
+  445  git commit -m "Completed array-methods exercise"
+  446  git add .
+  447  git commit -m "Removed argument from console log for values foreach method"
+  448  git push origin array-methods 
+  449  clear
+  450  git add .
+  451  git commit -m Modified numbers.filter logic"
+  452  git commit -m "Modified numbers.filter logic"
+  453  git push origin array-methods 
+  454  git add .
+  455  git commit -m "Completed typescript-operators"
+  456  clear
+  457  git push origin typescript-operators
+  458  clear
+  459  git switch typescript-carousel 
+  460  clear
+  461  git switch main
+  462  git branch array-methods
+  463  git switch array-methods 
+  464  cd array-methods/
+  465  npx tsc --watch
+  466  git add .
+  467  git commit -m "Added tracking of current dot in event listeners"
+  468  clear
+  469  git push origin typescript-carousel 
+  470  clear
+  471  git switch typescript-operators
+  472  cd typescript-operators
+  473  npx tsc --watch
+  474  ls
+  475  cd ..
+  476  ls
+  477  cd week-planner/
+  478  clear
+  479  ls
+  480  npx tsc --watch
+  481  npx tsc --watch
+  482  pwd
+  483  npx tsc --watch
+  484  git add .
+  485  git commit -m "Updated Q&A answers"
+  486  clear
+  487  git push origin array-methods 
+  488  clear
+  489  git add .
+  490  git commit -m "Forgot to add file"
+  491  git push origin array-methods 
+  492  clear
+  493  git switch typescript-carousel 
+  494  cd typescript-carousel/
+  495  npx tsc --watch
+  496  cd array-methods/
+  497  npx tsc --watch
+  498  git add .
+  499  git commit -m "Fixed filter and map logic"
+  500  git push origin array-methods 
+  501  clear
+  502  git switch main
+  503  clear
+  504  git branch command-line-basics
+  505  git switch command-line-basics 
+  506  clear
+  507  cd command-line-basics/
+  508  clear
+  509  man cat
+  510  man cat
+  511  cat laziness.txt 
+  512  cat impatience.txt 
+  513  cat hubris.txt 
+  514  cat laziness.txt impatience.txt hubris.txt 
+  515  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  516  clear
+  517  cat three-virtues.txt 
+  518  man ls
+  519  man ls
+  520  ls
+  521  ls -a
+  522  ls -F
+  523  ls lfz-staff/
+  524  ls -aF lfz-staff/
+  525  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  526  cat lfz-staff/contents.txt 
+  527  man pwd
+  528  clear
+  529  pwd
+  530  pwd > i-was-here.txt
+  531  ls i-was-here.txt 
+  532  cat i-was-here.txt 
+  533  man echo
+  534  clear
+  535  echo 'Hello, World!'
+  536  echo 'Hello, World!' > hello.txt
+  537  ls hello.txt 
+  538  cat hello.txt 
+  539  man touch
+  540  touch tag-youre-it.txt
+  541  touch snoot/boop.txt
+  542  ls snoot/
+  543  man mkdir
+  544  mkdir parent
+  545  ls parent/
+  546  mkdir -p parent/child/grandchild
+  547  touch .gitkeep parent/child/grandchild/
+  548  ls -a .gitkeep 
+  549  rm .gitkeep 
+  550  touch parent/child/grandchild/.gitkeep
+  551  ls a parent/child/grandchild/.gitkeep 
+  552  ls -a parent/child/grandchild/
+  553  man mv
+  554  mv pokiemans/ pokemon
+  555  ls
+  556  rm lol.txt 
+  557  ls
+  558  rm -r kill-me/
+  559  ls
+  560  man cp
+  561  cp and-then.txt no-and-then.txt
+  562  ls
+  563  cat and-then.txt no-and-then.txt 
+  564  man history
+  565  history
+  566  history > command-history.txt
