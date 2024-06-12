@@ -18,14 +18,14 @@ const filteredArr: number[] = numbers.filter((num) => {
 
 console.log('Even numbers:', filteredArr);
 
-function isName(name: any): void {
+function isName(name: any): unknown {
   for (let i = 0; i < name.length; i++) {
-    if (name.includes('D') || name.includes('d')) {
-      return;
-    } else {
-      console.log('No D:', name);
+    if (!name.includes('D') && !name.includes('d')) {
+      return name;
     }
   }
 }
 
-console.log(names.filter(isName));
+const filteredNames: string[] = names.filter(isName);
+
+console.log('No D:', filteredNames);

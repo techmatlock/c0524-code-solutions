@@ -17,11 +17,10 @@ const filteredArr = numbers.filter((num) => {
 console.log('Even numbers:', filteredArr);
 function isName(name) {
   for (let i = 0; i < name.length; i++) {
-    if (name.includes('D') || name.includes('d')) {
-      return;
-    } else {
-      console.log('No D:', name);
+    if (!name.includes('D') && !name.includes('d')) {
+      return name;
     }
   }
 }
-console.log(names.filter(isName));
+const filteredNames = names.filter(isName);
+console.log('No D:', filteredNames);
