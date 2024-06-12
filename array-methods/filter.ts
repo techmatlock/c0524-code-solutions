@@ -12,18 +12,11 @@ const names = [
   'Donna',
 ];
 
-function isEven(num: any): number[] {
-  const arr: number[] = [];
-  for (let i = 0; i < num.length; i++) {
-    if (num % 2 === 0) {
-      arr.push(num);
-    }
-  }
-  return arr;
-}
+const filteredArr: number[] = numbers.filter((num) => {
+  return num % 2 === 0;
+});
 
-const filteredArr: number[] = numbers.filter(isEven);
-console.log('filteredArr:', filteredArr);
+console.log('Even numbers:', filteredArr);
 
 function isName(name: any): void {
   for (let i = 0; i < name.length; i++) {

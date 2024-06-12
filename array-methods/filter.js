@@ -11,17 +11,10 @@ const names = [
   'Janese',
   'Donna',
 ];
-function isEven(num) {
-  const arr = [];
-  for (let i = 0; i < num.length; i++) {
-    if (num % 2 === 0) {
-      arr.push(num);
-    }
-  }
-  return arr;
-}
-const filteredArr = numbers.filter(isEven);
-console.log('filteredArr:', filteredArr);
+const filteredArr = numbers.filter((num) => {
+  return num % 2 === 0;
+});
+console.log('Even numbers:', filteredArr);
 function isName(name) {
   for (let i = 0; i < name.length; i++) {
     if (name.includes('D') || name.includes('d')) {
