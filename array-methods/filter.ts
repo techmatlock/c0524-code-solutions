@@ -19,10 +19,8 @@ const filteredArr: number[] = numbers.filter((num) => {
 console.log('Even numbers:', filteredArr);
 
 function isName(name: any): unknown {
-  for (let i = 0; i < name.length; i++) {
-    if (!name.includes('D') && !name.includes('d')) {
-      return name;
-    }
+  if (!name.includes('D') && !name.includes('d')) {
+    return name;
   }
 }
 
