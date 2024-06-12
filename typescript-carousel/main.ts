@@ -93,20 +93,22 @@ $dotsContainer.addEventListener('click', (event: Event): void => {
   const $eventTarget = event.target as HTMLElement;
   if (!$eventTarget) throw new Error('No $eventTarget found');
 
-  if ($eventTarget.matches('.dot')) {
-    const itemId = $eventTarget.getAttribute('data-item-id');
-    if (itemId === null) return;
-    if (itemId) {
-      $currentImage.src = images[+itemId];
-    }
+  if (!$eventTarget.matches('.dot')) return;
 
-    $allDots.forEach((dot) => {
-      dot.classList.remove('solid');
-      if (dot.getAttribute('data-item-id') === itemId) {
-        dot.classList.add('solid');
-      }
-    });
+  const itemId = $eventTarget.getAttribute('data-item-id');
+
+  if (!itemId) return;
+  if (itemId) {
+    $currentImage.src = images[+itemId];
   }
+
+  $allDots.forEach((dot) => {
+    dot.classList.remove('solid');
+    if (dot.getAttribute('data-item-id') === itemId) {
+      dot.classList.add('solid');
+    }
+  });
+
   intervalID = setInterval(nextImage, 3000);
 });
 
@@ -114,8 +116,6 @@ function nextImage(): void {
   if (count > images.length - 1) {
     count = 0;
   }
-
-  const $allDots = document.querySelectorAll('.dot');
 
   $allDots.forEach((dot) => {
     dot.classList.remove('solid');
