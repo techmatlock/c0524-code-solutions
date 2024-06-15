@@ -97,9 +97,7 @@ function deleteEmployee(employeeName: string): void {
 function checkIfFullTime(): void {
   Object.keys(business.employees).forEach((key) => {
     if (business.employees[key].daysOfWeekWorking.length >= 5) {
-      Object.defineProperty(business.employees[key], 'fullTime', {
-        value: true,
-      });
+      business.employees[key].fullTime = true;
     }
   });
 }
@@ -109,6 +107,5 @@ window.addEventListener('DOMContentLoaded', (): void => {
   checkIfFullTime();
   addEmployees();
   deleteEmployee('mark');
+  console.log(business);
 });
-
-console.log(business);
