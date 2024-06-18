@@ -62,6 +62,7 @@ function createEmployee(data: Record<string, any>): void {
       indexEnd = Math.floor(Math.random() * 5);
     }
     const employeeName = data[i].name;
+
     // creating a new property with employeeName
     business.employees[employeeName] = {
       position: jobTitles[Math.floor(Math.random() * jobTitles.length)],
@@ -78,8 +79,6 @@ async function addEmployees(): Promise<void> {
     const data = await response.json();
 
     createEmployee(data);
-
-    addWeekends();
   } catch (error) {
     console.log(`Error: ${error}`);
   }
@@ -98,14 +97,16 @@ function checkIfFullTime(): void {
   Object.keys(business.employees).forEach((key) => {
     if (business.employees[key].daysOfWeekWorking.length >= 5) {
       business.employees[key].fullTime = true;
+    } else {
+      business.employees[key].fullTime = false;
     }
   });
 }
 
 window.addEventListener('DOMContentLoaded', (): void => {
   addWeekends();
-  checkIfFullTime();
   addEmployees();
+  checkIfFullTime();
+  console.log('business', business);
   deleteEmployee('mark');
-  console.log(business);
 });

@@ -56,7 +56,6 @@ async function addEmployees() {
     if (!response.ok) throw new Error('Failed to get a response.');
     const data = await response.json();
     createEmployee(data);
-    addWeekends();
   } catch (error) {
     console.log(`Error: ${error}`);
   }
@@ -73,13 +72,15 @@ function checkIfFullTime() {
   Object.keys(business.employees).forEach((key) => {
     if (business.employees[key].daysOfWeekWorking.length >= 5) {
       business.employees[key].fullTime = true;
+    } else {
+      business.employees[key].fullTime = false;
     }
   });
 }
 window.addEventListener('DOMContentLoaded', () => {
   addWeekends();
-  checkIfFullTime();
   addEmployees();
+  checkIfFullTime();
+  console.log('business', business);
   deleteEmployee('mark');
-  console.log(business);
 });
