@@ -18,6 +18,8 @@ The `main.tsx` file with import statements that give `main.tsx` access to the DO
 
 - What are some other popular frontend frameworks?
 
+Angular, Vue.js, Svelte.
+
 ## Notes
 
 All student notes should be written here.
