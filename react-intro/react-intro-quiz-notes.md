@@ -10,11 +10,11 @@ A library that allows developers to build websites and interfaces using individu
 
 - What is a React component?
 
-A self-contained collection of HTML, CSS and JavaScript that provides all the of the functionality necessary for something like a form.
+A self-contained collection of HTML (JSX), CSS and JavaScript that provides all the of the functionality necessary for something like a form.
 
 - How do you mount a React app (root component) to the DOM?
 
-The `main.tsx` file with import statements that give `main.tsx` access to the DOM.
+By calling the createRoot() method on the ReactDOM in the `main.tsx` file. And include the component inside of the function.
 
 - What are some other popular frontend frameworks?
 
