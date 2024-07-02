@@ -20,9 +20,7 @@ Passing props in the component call as an argument.
 
 - How do you write JavaScript expressions in JSX?
 
-If just one line, you do return followed by JSX and then semicolon.
-
-If multiple lines, you wrap your JSX in parenthesis followed by multiple elements in the return statement.
+You use {} braces in the JSX and inside is the prop object with key names to access the property values.
 
 ## Notes
 

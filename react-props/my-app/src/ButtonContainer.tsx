@@ -1,8 +1,8 @@
-type Button = {
+type Props = {
   btnText: string;
 };
 
-export function ButtonContainer({ btnText }: Button) {
+export function ButtonContainer({ btnText }: Props) {
   return (
     <div>
       <button>{btnText}</button>
