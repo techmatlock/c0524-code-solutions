@@ -24,12 +24,12 @@ The value of the local variable does not get updated by the setter function. The
 
 - What two actions happen when you call a `state setter` function?
 
-It calculates the next state value.
-The state value will change.
+When the state setter updates, React calculates the cache value.
+React schedules a re-render (doesn't schedule immediately) of the App component.
 
 - When does the local `state variable` get updated with the new value?
 
-When React re-renders the component and calls useState.
+When React re-renders the component.
 
 ## Notes
 
