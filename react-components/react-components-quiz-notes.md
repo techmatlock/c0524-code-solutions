@@ -10,11 +10,14 @@ A function that typically takes in data in the form of a props object.
 
 - How do you define a component in React?
 
-You create the function preceded by the keyword export.  Then function name must start with a capital letter.  After the return statement is the JSX which includes your HTML elements.
+The function name must start with a capital letter.
+Can only accept 0 or 1 parameters.
+It will return JSX.
 
 - How is a component "rendered" (made visible on the browser page)?
 
-In the App component, you import the named export and specify from without the file extension.  Then in the App function, you call the component that's wrapped in </> tags.
+React calls the component function
+All the rest is handled by React.
 
 ## Notes
 
