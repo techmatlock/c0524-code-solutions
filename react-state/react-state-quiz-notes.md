@@ -24,15 +24,15 @@ The value of the local variable does not get updated by the setter function. The
 
 - What two actions happen when you call a `state setter` function?
 
-It calculates the next state value.
-The state value will change.
+When the state setter updates, React calculates the cache value.
+React schedules a re-render (doesn't schedule immediately) of the App component.
 
 - When does the local `state variable` get updated with the new value?
 
-When React re-renders the component and calls useState.
+When React re-renders the component.
 
 ## Notes
 
-How would you have all content be in sync?
+If you do not use state, your component will not get rendered
 
-By using a state setter function in the app component. And then adding index to each props value.
+When scheduling re-render it does not call and render immediately, it will happen when everything else is finished and then the state will get updated.
