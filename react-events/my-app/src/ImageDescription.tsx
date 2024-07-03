@@ -1,12 +1,11 @@
 type Props = {
   caption: string;
-  onCaptionClick: () => void;
 };
 
-export function ImageDescription({ caption, onCaptionClick }: Props) {
+export function ImageDescription({ caption }: Props) {
   return (
     <div>
-      <p onClick={onCaptionClick}>{caption}</p>
+      <p>{caption}</p>
     </div>
   );
 }

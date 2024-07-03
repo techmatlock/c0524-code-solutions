@@ -29,18 +29,9 @@ export function App() {
   return (
     <>
       <Header headerText={headerText} />
-      <ImageContainer
-        onCaptionClick={handleCaptionClick}
-        caption={images[captionIndex]}
-      />
-      <ImageCaption
-        onCaptionClick={handleCaptionClick}
-        caption={captions[captionIndex]}
-      />
-      <ImageDescription
-        onCaptionClick={handleCaptionClick}
-        caption={descriptions[captionIndex]}
-      />
+      <ImageContainer caption={images[captionIndex]} />
+      <ImageCaption caption={captions[captionIndex]} />
+      <ImageDescription caption={descriptions[captionIndex]} />
       <ButtonContainer
         onCaptionClick={handleCaptionClick}
         buttonText={buttonText}
