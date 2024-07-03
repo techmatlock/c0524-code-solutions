@@ -6,28 +6,27 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is an "event" in React?
 
-A user interaction with a button, form, etc. which calls the function when the event happens.
+An action that we can listen to so that we can run some sort of code.
 
 - What is an "event handler"? Which component declares the handler?
 
-Enables you to call a function trigger an action when a user clicks on an element.
-The App component.
+The event handler is the function that is called when an event occurs. The handler can be defined within the component itself or the parent component.
 
 - How do you pass an event handler to a React component?
 
-By passing the handle function in the App component as a prop to the child component.
+By passing a function on the "event handler prop" of the component that declared the event.
 
 - What is the naming convention for event handlers?
 
-onXxx where Xxx is the event.
+Starts with the lowercase name 'handle' followed by the name of the event.
 
 - What is an "event handler prop"? Which component declares the prop?
 
-A function that gets passed to a child component. The App component.
+Event handler prop is a property on the component that declares the event. The parent declares the prop.
 
 - What are some custom event handler props a component may wish to define?
 
-onCaptionClick, onImageClick, onDescriptionClick
+onCaptionClick, onImageClick, onDescriptionClick, onSave, onCancel.
 
 - What is the naming convention for custom event handler props?
 
