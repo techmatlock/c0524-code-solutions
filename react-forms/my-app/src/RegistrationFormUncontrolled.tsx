@@ -6,7 +6,7 @@ export function RegistrationFormUncontrolled() {
 
     const formData = new FormData(event.currentTarget);
     const { username, password } = Object.fromEntries(formData);
-    console.log(username, password);
+    console.log('RegistrationFormUncontrolled:', username, password);
   };
 
   return (
