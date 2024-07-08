@@ -12,10 +12,15 @@ type Props = {
 export function UserForm({ user }: Props) {
   const [username, setUsername] = useState(user?.username ?? '');
   const [password, setPassword] = useState(user?.password ?? '');
+  const isCreating = user === undefined;
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(user?.username);
+    if (isCreating) {
+      console.log('User created');
+    } else {
+      console.log('User edited');
+    }
   };
 
   return (
