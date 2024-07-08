@@ -6,9 +6,15 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What are the phases in the React design process?
 
+Start from UI mockup, determine UI state, and determine the events (actions) that need to modify state.
+
 - How does data flow in React?
 
+By passing down data from parent to a child via props.
+
 - How can children components modify state in their parents?
+
+If we pass an event handler prop from parent to child, child can call the event handler and update state in their parents.
 
 ## Notes
 
