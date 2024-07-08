@@ -18,7 +18,7 @@ Better control over form data, easier state management, and improved validation 
 
 - Which style do you prefer?
 
-I like controlled since you can validate the inputs with the onChange prop without having to submit the form.
+I like controlled since you can validate the inputs with the onChange handler without having to submit the form.
 
 - What two props must you pass to an input for it to be "controlled"?
 
