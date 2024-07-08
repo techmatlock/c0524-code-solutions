@@ -10,7 +10,7 @@ You often don't know how much data you'll receive via an API or other fetched da
 
 - Why is it important for React components to be data-driven?
 
-Because data frequently changes.
+They are easy to maintain and feel more responsive. Components display the data and are instantly updated when data changes. Components are created/removed when data is created or deleted. Only update state when needed to. The user dictates when components will change.
 
 - What `Array` method is commonly used to create a list of React components?
 
