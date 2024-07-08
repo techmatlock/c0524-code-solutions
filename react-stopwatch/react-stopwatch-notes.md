@@ -2,16 +2,29 @@
 
 ## Notes
 
-1) Create CSS circle
-2) In the middle of the circle should be a variable with a value from the elapsed time.
-3) Create two state variables:
-  - One for elapsed time and one for the active interval ID
-3) When the user clicks the play icon:
-  - Start setInterval and setCount((prev) => prev + 1)
-  - Change play icon to a pause icon
-  - Stop the setInterval function
-4) When the user clicks the pause icon:
-  - Stop the setInterval function
-  - Change the pause icon to a play icon
-5) When the user clicks the stopwatch face and stopwatch is paused:
-  - Change elapsed time to 0
+1. Create CSS circle
+2. In the middle of the circle should be a the state variable count which gets updated from the setInterval function.
+3. Create three states:
+
+- One for count, interval, and visibility of icons.
+
+4. For the JSX elements:
+
+- Add a onClick handler prop to stopwatch, play icon, and pause icon. Pass the count event handler functions to the event handler.
+
+5. When the user clicks the play icon:
+
+- Create an event handler function called handlePlay
+- Use state to create a state variable intervalId and setIntervalId. The setInterval function should start a setCount function which takes the current state count and adds one second.
+- Change the play icon to a pause icon in the JSX element with a ternary condition.
+
+6. When the user clicks the pause icon:
+
+- Create an event handler function called handlePause.
+- Stop the setInterval function with clearInterval (and the intervalId).
+- Change the pause icon to a play icon in the JSX element with a ternary condition.
+
+7. When the user clicks the stopwatch face and stopwatch is paused:
+
+- Create an event handler function called handleFace.
+- Change state variable count to 0
