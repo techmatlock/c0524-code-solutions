@@ -8,14 +8,13 @@ type Props = {
 }
 
 export function RotatingBanner ({ items }: Props) {
-
-  const [count, setCount] = useState(0);
+  const [ count, setCount ] = useState(0);
 
   return (
     <>
       <Banner item={items[count]}/>
       <GoToButton text={'Prev'}/>
-      <Indicators items={items}/>
+      <Indicators count={items.length}/>
       <GoToButton text={'Next'}/>
     </>
   );

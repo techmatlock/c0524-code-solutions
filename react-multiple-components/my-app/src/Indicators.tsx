@@ -1,12 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 
 type Props = {
-  items: string[];
+  count: number;
 };
 
-export function Indicators({ items }: Props) {
+export function Indicators({ count }: Props) {
   const buttons = [];
-  for (let i = 0; i < items.length; i++) {
+  for (let i = 0; i < count; i++) {
     buttons.push(
       <button key={uuidv4()} className="p-6 bg-white text-black shadow-sm border-4 border-black rounded-none">
         {i}
