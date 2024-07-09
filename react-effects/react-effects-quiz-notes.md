@@ -16,7 +16,7 @@ Let you specify side effects that are caused by rendering itself, rather than a 
 
 You should use effects to step out of your react code and synchronize with some external system (browser APIs, third-party widgets, and network).
 
-If you are just adjusting state and not needing to step outside your react code, then effects are not needed.
+If you are just adjusting state or not needing to connect to an external system, then effects are not needed.
 
 - When do Effects run?
 
@@ -28,7 +28,7 @@ useEffect
 
 - What are Effect dependencies and how do you declare them?
 
-An array of values that the effect depends on. You declare them inside brackets as the second argument after the callback function in useEffect.
+An array of values that the effect depends on. You declare them inside brackets as the second argument after the setup function in useEffect.
 
 - Why would you want to clean up from an Effect?
 
@@ -40,7 +40,7 @@ Use the return statement.
 
 - When does the cleanup function run?
 
-When the component unmounts.
+When the component is removed from the page (unmounts).
 
 ## Notes
 
