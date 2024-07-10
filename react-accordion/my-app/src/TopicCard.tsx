@@ -17,11 +17,7 @@ export function TopicCard({ topic, isActive, onClick }: Props) {
         <h3 onClick={onClick} className="bg-gray-500 p-2">
           {topic.title}
         </h3>
-        {isActive ? (
-          <p className="bg-gray-300 text-black">{topic.content}</p>
-        ) : (
-          <></>
-        )}
+        {isActive && <p className="bg-gray-300 text-black">{topic.content}</p>}
       </div>
     </div>
   );
