@@ -40,8 +40,8 @@ export function Carousel({ images }: Props) {
   }, [currentIndex]);
 
   return (
-    <div className="container lg border-2 border-white">
-      <div className="flex items-center border-2 border-purple-500">
+    <>
+      <div className="flex justify-center items-center">
         <PrevButton onPrevClick={handlePrevious} />
         {images.map((image, index) => (
           <ImageBanner
@@ -62,6 +62,6 @@ export function Carousel({ images }: Props) {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
