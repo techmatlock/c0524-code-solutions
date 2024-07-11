@@ -13,7 +13,7 @@ export function ImageBanner({ image, isActive }: Props) {
     isActive && (
       <div>
         <img
-          className="object-contain w-full"
+          className="max-h-96 object-contain w-full"
           src={image.src}
           alt={image.alt}
         />
