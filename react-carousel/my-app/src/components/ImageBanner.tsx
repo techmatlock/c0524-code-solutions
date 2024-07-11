@@ -11,9 +11,12 @@ type CharacterProps = {
 export function ImageBanner({ image, isActive }: Props) {
   return (
     isActive && (
-      <div className="flex justify-center w-5/12">
-        {' '}
-        <img className="w-full" src={image.src} alt={image.alt} />
+      <div>
+        <img
+          className="object-contain w-full"
+          src={image.src}
+          alt={image.alt}
+        />
       </div>
     )
   );

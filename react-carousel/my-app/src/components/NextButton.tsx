@@ -5,5 +5,5 @@ type Props = {
 };
 
 export function NextButton({ onNextClick }: Props) {
-  return <FaAngleRight onClick={onNextClick} />;
+  return <FaAngleRight className="text-5xl" onClick={onNextClick} />;
 }

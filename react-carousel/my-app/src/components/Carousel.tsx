@@ -42,17 +42,23 @@ export function Carousel({ images }: Props) {
   return (
     <>
       <div className="flex justify-center items-center">
-        <PrevButton onPrevClick={handlePrevious} />
-        {images.map((image, index) => (
-          <ImageBanner
-            key={image.alt + index}
-            image={image}
-            isActive={currentIndex === index}
-          />
-        ))}
-        <NextButton onNextClick={handleNext} />
+        <div className="flex justify-center basis-1/4">
+          <PrevButton onPrevClick={handlePrevious} />
+        </div>
+        <div className="basis-2/4">
+          {images.map((image, index) => (
+            <ImageBanner
+              key={image.alt + index}
+              image={image}
+              isActive={currentIndex === index}
+            />
+          ))}
+        </div>
+        <div className="flex justify-center basis-1/4">
+          <NextButton onNextClick={handleNext} />
+        </div>
       </div>
-      <div className="flex justify-center mt-2 border-2 border-red-500">
+      <div className="flex justify-center mt-2">
         {images.map((image, index) => (
           <Indicators
             key={image.alt + index}

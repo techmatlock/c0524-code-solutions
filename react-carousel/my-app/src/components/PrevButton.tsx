@@ -5,5 +5,5 @@ type Props = {
 };
 
 export function PrevButton({ onPrevClick }: Props) {
-  return <FaAngleLeft onClick={onPrevClick} />;
+  return <FaAngleLeft className="text-5xl" onClick={onPrevClick} />;
 }
