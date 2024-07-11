@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from 'react-router-dom';
 
 export function Header() {
   return (
@@ -6,8 +6,12 @@ export function Header() {
       <header className="bg-gray-500 p-4">
         <nav>
           <ul>
-            <li className="inline px-2">About</li>
-            <li className="inline px-2">Catalog</li>
+            <Link to="/about" className="inline px-2">
+              About
+            </Link>
+            <Link to="/" className="inline px-2">
+              Catalog
+            </Link>
           </ul>
         </nav>
       </header>
