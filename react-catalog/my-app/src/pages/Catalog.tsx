@@ -5,6 +5,7 @@ import { toDollars } from '../lib';
 
 export function Catalog() {
   const [items, setItems] = useState<Product[]>([]);
+  const [error, setError] = useState<unknown>();
 
   useEffect(() => {
     async function loadItems() {
@@ -12,11 +13,19 @@ export function Catalog() {
         const items = await readCatalog();
         setItems(items);
       } catch (error) {
-        console.log(error);
+        setError(error);
       }
     }
     loadItems();
   }, []);
+
+  if (error || !items) {
+    return (
+      <div>
+        Error! {error instanceof Error ? error.message : 'Unknown error'}
+      </div>
+    );
+  }
 
   return (
     <>

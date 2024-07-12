@@ -24,9 +24,11 @@ export function Details() {
 
   if (error || !product) {
     return (
-      <div className="flex flex-wrap justify-center items-center">
-        <p className="flex justify-center w-full">{`Error: ${error}`}</p>
-        <Link to="/">&lt; Back to Catalog</Link>
+      <div className="flex flex-wrap justify-center items-center mt-2">
+        Error! {error instanceof Error ? error.message : 'Unknown error'}
+        <div className="flex justify-center w-full">
+          <Link to="/">&lt; Back to Catalog</Link>
+        </div>
       </div>
     );
   }
