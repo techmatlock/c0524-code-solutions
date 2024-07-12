@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { type Product, readProduct } from '../lib';
+import { toDollars } from '../lib';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 export function Details() {
@@ -37,7 +38,7 @@ export function Details() {
 
   return (
     <>
-      <div className="flex flex-wrap mx-6 p-8 border-2 border-gray-500 rounded-md">
+      <div className="flex flex-wrap mx-6 p-8 border-2 border-gray-400 rounded-md">
         <div className="basis-full px-4 mb-4">
           <Link to="/">&lt; Back to Catalog</Link>
         </div>
@@ -54,7 +55,7 @@ export function Details() {
           <div className="flex px-10">
             <div className="basis-half">
               <h1 className="text-3xl">{product.name}</h1>
-              <h2 className="pt-4 text-xl">{product.price}</h2>
+              <h2 className="pt-4 text-xl">{toDollars(product.price)}</h2>
               <p className="pt-4">{product.shortDescription}</p>
             </div>
           </div>
@@ -65,10 +66,10 @@ export function Details() {
           </div>
         </div>
       </div>
-      <div className="mx-6 px-12">
+      <div className="mx-6 px-10">
         <button
           onClick={() => handleClick(product.name)}
-          className="p-2 rounded-md bg-gray-500">
+          className="p-2 rounded-md bg-gray-300">
           Add to Cart
         </button>
       </div>

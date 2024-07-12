@@ -3,9 +3,9 @@ import { Link, Outlet } from 'react-router-dom';
 export function Header() {
   return (
     <>
-      <header className="bg-gray-500 p-4">
+      <header className="bg-gray-400 p-4">
         <nav>
-          <ul>
+          <ul className="text-white">
             <Link to="/about" className="inline px-2">
               About
             </Link>
