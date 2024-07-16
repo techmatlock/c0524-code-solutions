@@ -8,6 +8,8 @@ Answer the following questions in the provided markdown file before turning in t
 
 Defines how data in a relational db should be organized.
 
+A collection of tables.
+
 - What is a table?
 
 A list of rows each having the same set of attributes.
@@ -15,6 +17,8 @@ A list of rows each having the same set of attributes.
 - What is a row?
 
 It's within a table that has the same set of attributes (columns).
+
+Each new insert of data.
 
 - What is an attribute and what other names are used to describe them?
 
