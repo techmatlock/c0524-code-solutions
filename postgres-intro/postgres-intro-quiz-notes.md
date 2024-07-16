@@ -11,6 +11,7 @@ Apps need to store and retrieve complex data in an organized fashion. They can b
 - What is PostgreSQL and what are some alternative relational databases?
 
 An open-source relational database management system (RDBMS).
+Some alternatives are: MySQL, MariaDB, Microsoft SQL Server, and Oracle Database.
 
 - What are some advantages of learning a relational database?
 
