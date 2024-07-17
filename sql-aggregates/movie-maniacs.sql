@@ -1,6 +1,7 @@
-select "c"."firstName",
+select "firstName",
+       "lastName",
        sum("payments"."amount") as "rentalAmount"
-from "customers" as "c"
+from "customers"
 join "payments" using ("customerId")
-group by "c"."firstName"
+group by "customerId"
 order by "rentalAmount" desc
