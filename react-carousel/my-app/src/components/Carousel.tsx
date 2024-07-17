@@ -16,6 +16,13 @@ type CharacterProps = {
 export function Carousel({ images }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
+
   if (currentIndex > images.length - 1) {
     setCurrentIndex(0);
   }
@@ -31,13 +38,6 @@ export function Carousel({ images }: Props) {
   function handleSelect(index: number) {
     setCurrentIndex(index);
   }
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1);
-    }, 3000);
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
 
   return (
     <>
