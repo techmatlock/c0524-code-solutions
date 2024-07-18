@@ -12,7 +12,7 @@ No, it's not required but recommended to follow the convention.
 
 - What is Express middleware?
 
-A function that fulfills the requested action.
+A function that fulfills the requested action before the response is sent.
 
 - What is Express middleware useful for?
 
@@ -27,7 +27,7 @@ By calling the use() method on the app object.
 
 - Which objects does an Express application pass to your middleware to manage the request/response lifecycle of the server?
 
-request, response, and next.
+request, response
 
 ## Notes
 
