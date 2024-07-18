@@ -16,7 +16,10 @@ A function that fulfills the requested action.
 
 - What is Express middleware useful for?
 
-To handle HTTP requests, perform an action, and pass the request to each of the functions in its middleware array if the function calls next().
+* Execute any code.
+* Make changes to the request and the response objects.
+* End the request-response cycle.
+* Call the next middleware function in the stack.
 
 - How do you mount a middleware with an Express application?
 
