@@ -12,7 +12,7 @@ No, it's not required but recommended to follow the convention.
 
 - What is Express middleware?
 
-A function that fulfills the requested action.
+A function that fulfills the requested action before the response is sent.
 
 - What is Express middleware useful for?
 
