@@ -27,7 +27,7 @@ By calling the use() method on the app object.
 
 - Which objects does an Express application pass to your middleware to manage the request/response lifecycle of the server?
 
-request, response, and next.
+request, response
 
 ## Notes
 
