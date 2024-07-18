@@ -9,19 +9,16 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
   res.send('Welcome to the home page.');
-  next();
 });
 
-app.get('/notes', (req, res, next) => {
+app.get('/notes', (req, res) => {
   res.send('Welcome to the notes page.');
-  next();
 });
 
-app.post('/notes/123', (req, res, next) => {
+app.post('/notes/123', (req, res) => {
   res.send('POST request to /notes/123.');
-  next();
 });
 
 app.listen(8080, () => {
