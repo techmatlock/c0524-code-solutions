@@ -40,12 +40,11 @@ app.get('/api/film/', async (req, res, next) => {
       select
         "title"
       from "films"
-      where "filmId" = $1;
+      where "filmId" = $1
     `;
     const params = [filmId];
-    const result = await db.query(sql, params);
-    const film = result.rows[0];
-    res.send(film);
+    await db.query(sql, params);
+    res.send('success');
   } catch (error) {
     next(error);
   }
@@ -69,9 +68,8 @@ app.put('/api/film', async (req, res, next) => {
       where "filmId" = $1
     `;
     const params = [filmId, title];
-    const result = await db.query(sql, params);
-    const film = result.rows;
-    res.send(film);
+    await db.query(sql, params);
+    res.send('success');
   } catch (error) {
     next(error);
   }
