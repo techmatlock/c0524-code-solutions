@@ -23,9 +23,6 @@ app.get('/api/films/', async (req, res, next) => {
     `;
     const result = await db.query(sql);
     const films = result.rows;
-    if (!films) {
-      throw new ClientError(404, 'films not found');
-    }
     res.send(films);
   } catch (error) {
     next(error);
@@ -48,9 +45,6 @@ app.get('/api/film/', async (req, res, next) => {
     const params = [filmId];
     const result = await db.query(sql, params);
     const film = result.rows[0];
-    if (!film) {
-      throw new ClientError(404, `filmId: ${filmId} not found`);
-    }
     res.send(film);
   } catch (error) {
     next(error);
@@ -77,9 +71,6 @@ app.put('/api/film', async (req, res, next) => {
     const params = [filmId, title];
     const result = await db.query(sql, params);
     const film = result.rows;
-    if (!film) {
-      throw new ClientError(404, `film: ${film} not found.`);
-    }
     res.send(film);
   } catch (error) {
     next(error);
