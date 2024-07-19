@@ -6,11 +6,13 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is the purpose of the Express Static middleware?
 
-To examine request paths to see if the requested path is a file stored in a specific location on the server's file system.
+It serves static files such as a photo or html file.
 
 - What does `express.static()` return?
 
 It returns a 404 response if it can't find a file. Or it finds and returns the static files requested.
+
+A middleware function.
 
 - What are several examples of static files?
 
