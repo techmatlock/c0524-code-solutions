@@ -20,7 +20,7 @@ Pictures, css, js, and html.
 
 - What is a good way to serve application images using Express?
 
-Using Express Static middleware.
+Use express.static() to declare the directory `public` as a repository for static files.
 
 ## Notes
 
