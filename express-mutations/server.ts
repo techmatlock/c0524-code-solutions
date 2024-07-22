@@ -114,9 +114,7 @@ app.delete('/api/actors/:actorId', async (req, res, next) => {
 
     const params = [actorId];
     const result = await db.query(sql, params);
-    console.log('result', result);
     const actor = result.rows[0];
-    console.log('actor', actor);
     if (!actor) throw new ClientError(404, `actor ${actor} not found.`);
     res.status(204).json(actor);
   } catch (error) {
