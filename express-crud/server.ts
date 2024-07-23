@@ -48,10 +48,33 @@ app.get('/api/grades/:gradeId', async (req, res, next) => {
 
     const params = [gradeId];
     const result = await db.query<Grade>(sql, params);
-    if (!result) res.sendStatus(500);
     const grade = result.rows[0];
-    if (!grade) res.status(404).send('File not found.');
+    if (!grade) res.status(404).send(`grade ${gradeId} not found`);
     res.status(200).json(grade);
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post('/api/grades', async (req, res, next) => {
+  try {
+    const { name, course, score } = req.body;
+    if (!name || !course || !score)
+      throw new ClientError(400, 'name, course, and score is required');
+    if (!(Number.isInteger(+score) && score >= 0 && score <= 100))
+      throw new ClientError(400, 'score is not an integer between 0 to 100.');
+
+    const sql = `
+      insert into "grades"
+        (name, course, score)
+      values ($1, $2, $3)
+      returning *;
+    `;
+
+    const params = [name, course, score];
+    const result = await db.query<Grade>(sql, params);
+    const grade = result.rows[0];
+    res.status(201).json(grade);
   } catch (error) {
     next(error);
   }
@@ -79,7 +102,6 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
 
     const params = [name, course, score, gradeId];
     const result = await db.query<Grade>(sql, params);
-    if (!result) res.sendStatus(500);
     const grade = result.rows[0];
     if (!grade)
       throw new ClientError(
@@ -107,7 +129,6 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
 
     const params = [gradeId];
     const result = await db.query<Grade>(sql, params);
-    if (!result) res.sendStatus(500);
     const grade = result.rows[0];
     if (!grade)
       throw new ClientError(
