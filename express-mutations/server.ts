@@ -36,15 +36,10 @@ app.get('/api/actors/:actorId', async (req, res, next) => {
 
 app.post('/api/actors/', async (req, res, next) => {
   try {
-    const newActor = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-    };
+    const { firstName, lastName } = req.body;
 
-    if (!newActor.firstName)
-      throw new ClientError(400, 'firstName missing in request body.');
-    if (!newActor.lastName)
-      throw new ClientError(400, 'lastName missing in request body.');
+    if (!firstName || !lastName)
+      throw new ClientError(400, 'firstName/lastName missing in the request.');
 
     const sql = `
     insert into actors ("firstName", "lastName")
@@ -52,8 +47,9 @@ app.post('/api/actors/', async (req, res, next) => {
     returning *;
     `;
 
-    const params = [newActor.firstName, newActor.lastName];
+    const params = [firstName, lastName];
     const result = await db.query(sql, params);
+    if (!result) res.sendStatus(500);
     const actor = result.rows[0];
     if (!actor)
       throw new ClientError(404, `actor ${firstName} ${lastName} not found.`);
@@ -70,16 +66,12 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
     if (!actorId) throw new ClientError(400, 'actorId required');
     if (!Number.isInteger(+actorId))
       throw new ClientError(400, `actorId ${actorId} not a number.`);
-    console.log('req.body --->', req.body);
 
-    const currentActor = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-    };
+    const { firstName, lastName } = req.body;
 
-    if (!currentActor.firstName)
+    if (!firstName)
       throw new ClientError(400, 'firstName missing in request body.');
-    if (!currentActor.lastName)
+    if (!lastName)
       throw new ClientError(400, 'lastName missing in request body.');
 
     const sql = `
@@ -90,8 +82,9 @@ app.put('/api/actors/:actorId', async (req, res, next) => {
       returning *;
   `;
 
-    const params = [currentActor.firstName, currentActor.lastName, +actorId];
+    const params = [firstName, lastName, actorId];
     const result = await db.query(sql, params);
+    if (!result) res.sendStatus(500);
     const actor = result.rows[0];
     if (!actor) throw new ClientError(404, `actor ${actor} was not found.`);
     res.status(200).json(actor);
@@ -114,6 +107,7 @@ app.delete('/api/actors/:actorId', async (req, res, next) => {
 
     const params = [actorId];
     const result = await db.query(sql, params);
+    if (!result) res.sendStatus(500);
     const actor = result.rows[0];
     if (!actor) throw new ClientError(404, `actor ${actor} not found.`);
     res.status(204).json(actor);
