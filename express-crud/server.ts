@@ -19,14 +19,14 @@ const db = new pg.Pool({
 const app = express();
 app.use(express.json());
 
-app.get('/api/grades', async (req: Grade, res, next) => {
+app.get('/api/grades', async (req, res, next) => {
   try {
     const sql = `
       select *
         from "grades"
     `;
 
-    const result = await db.query(sql);
+    const result = await db.query<Grade>(sql);
     const grades = result.rows;
     res.status(200).json(grades);
   } catch (error) {
@@ -34,11 +34,11 @@ app.get('/api/grades', async (req: Grade, res, next) => {
   }
 });
 
-app.get('/api/grades/:gradeId', async (req: Grade, res, next) => {
+app.get('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const { gradeId } = req.params;
     if (!Number.isInteger(+gradeId))
-      throw new ClientError(`gradeId ${gradeId} needs to be a number`);
+      throw new ClientError(400, `gradeId ${gradeId} needs to be a number`);
 
     const sql = `
     select *
@@ -47,7 +47,7 @@ app.get('/api/grades/:gradeId', async (req: Grade, res, next) => {
   `;
 
     const params = [gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     if (!result) res.sendStatus(500);
     const grade = result.rows[0];
     if (!grade) res.status(404).send('File not found.');
@@ -57,7 +57,7 @@ app.get('/api/grades/:gradeId', async (req: Grade, res, next) => {
   }
 });
 
-app.put('/api/grades/:gradeId', async (req: Grade, res, next) => {
+app.put('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const { gradeId } = req.params;
     if (!Number.isInteger(+gradeId))
@@ -78,7 +78,7 @@ app.put('/api/grades/:gradeId', async (req: Grade, res, next) => {
     `;
 
     const params = [name, course, score, gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     if (!result) res.sendStatus(500);
     const grade = result.rows[0];
     if (!grade)
@@ -92,7 +92,7 @@ app.put('/api/grades/:gradeId', async (req: Grade, res, next) => {
   }
 });
 
-app.delete('/api/grades/:gradeId', async (req: Grade, res, next) => {
+app.delete('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const { gradeId } = req.params;
     if (!Number.isInteger(+gradeId))
@@ -106,7 +106,7 @@ app.delete('/api/grades/:gradeId', async (req: Grade, res, next) => {
     `;
 
     const params = [gradeId];
-    const result = await db.query(sql, params);
+    const result = await db.query<Grade>(sql, params);
     if (!result) res.sendStatus(500);
     const grade = result.rows[0];
     if (!grade)
