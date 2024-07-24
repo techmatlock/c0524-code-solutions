@@ -29,7 +29,6 @@ app.get('/api/products', async (req, res, next) => {
         from "products";
     `;
     const result = await db.query<Products[]>(sql);
-    if (!result) res.sendStatus(500);
     res.json(result.rows);
   } catch (error) {
     next(error);
@@ -50,7 +49,8 @@ app.get('/api/products/:productId', async (req, res, next) => {
 
     const params = [productId];
     const result = await db.query<Products>(sql, params);
-    if (!result) res.sendStatus(500);
+    if (!result.rows[0])
+      throw new ClientError(404, `product with ${productId} not found.`);
     res.json(result.rows[0]);
   } catch (error) {
     next(error);
