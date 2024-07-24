@@ -69,12 +69,12 @@ export function Todos() {
           isCompleted: todo.isCompleted === true ? false : true,
         }),
       });
+      if (!response.ok) throw new Error(`Response status: ${response.status}`);
       const data = (await response.json()) as Todo;
       const newTodo = todos.map((item) =>
         item.todoId === data.todoId ? data : item
       );
       setTodos(newTodo);
-      if (!response.ok) throw new Error(`Response status: ${response.status}`);
     } catch (error) {
       setError(error);
     }
