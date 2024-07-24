@@ -46,13 +46,11 @@ export function Todos() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          task: newTodo.task,
-          isCompleted: newTodo.isCompleted,
-        }),
+        body: JSON.stringify(newTodo),
       });
+      if (!response.ok) throw new Error(`Response status: ${response.status}`);
       const todo = (await response.json()) as Todo;
-      setTodos((todos) => [todo, ...todos]);
+      setTodos([todo, ...todos]);
     } catch (error) {
       setError(error);
     }
