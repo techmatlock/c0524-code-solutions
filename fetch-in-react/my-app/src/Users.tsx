@@ -26,14 +26,15 @@ export function Users() {
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
-        const json = (await response.json()) as User;
+        const json = (await response.json()) as User[];
         if (!json) {
           throw new Error('Failed to retrieve JSON response.');
         }
-        setIsLoading(false);
         setUsers(json);
       } catch (error) {
         setError(error);
+      } finally {
+        setIsLoading(false);
       }
     }
     getUsers();

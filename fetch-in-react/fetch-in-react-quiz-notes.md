@@ -10,7 +10,9 @@ fetch()
 
 - What two things need to be done to properly handle HTTP request errors? Why?
 
-A try/catch block. Because the promise might be rejected or the response contains server status errors like 404 and 500.
+A try/catch block. Because if fetch error throws exception or successful returns response.ok.
+
+Check if response.ok and throw an 'Error' if it is false.
 
 - How can `useEffect` be used to load data for a component?
 
@@ -22,7 +24,7 @@ Use no dependencies in the array.
 
 - How do you use `useEffect` to load component data every time the data key changes?
 
-By adding the state variable to the dependencies array.
+By adding the data key to the dependencies array.
 
 - In a large-scale production app, what are some better alternatives for loading and managing backend data?
 
