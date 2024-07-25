@@ -1,10 +1,9 @@
 import { Link, Outlet } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
-import { useContext } from 'react';
-import { CartContext } from './CartContent';
+import { useCart } from './useCart.ts';
 
 export function Header() {
-  const { cart } = useContext(CartContext);
+  const { cart } = useCart();
 
   return (
     <div>
