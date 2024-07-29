@@ -38,8 +38,10 @@ export type Todo = UnsavedTodo & {
 
 export async function readTodos(): Promise<Todo[]> {
   const req = {
+    method: 'GET',
     headers: {
       Authorization: `Bearer ${readToken()}`,
+      'Content-Type': 'application/json',
     },
   };
   const res = await fetch('/api/todos', req);
@@ -51,6 +53,7 @@ export async function insertTodo(todo: UnsavedTodo): Promise<Todo> {
   const req = {
     method: 'POST',
     headers: {
+      Authorization: `Bearer ${readToken()}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(todo),
